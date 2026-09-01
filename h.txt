@@ -1,0 +1,3 @@
+mongodb+srv://anjali99683598_db_user:anjali123@cluster0.xtukt6l.mongodb.net/devtrace?retryWrites=true&w=majority&appName=Cluster0
+
+dtyk nlou hyfv qtud atmp

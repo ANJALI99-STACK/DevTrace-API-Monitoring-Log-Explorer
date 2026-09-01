@@ -1,0 +1,34 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DevTraceExportBucketAccess",
+      "Effect": "Allow",
+      "Action": ["s3:PutObject", "s3:GetObject", "s3:ListBucket"],
+      "Resource": ["arn:aws:s3:::devtrace-exports", "arn:aws:s3:::devtrace-exports/*"]
+    },
+    {
+      "Sid": "DevTraceFrontendBucketDeploy",
+      "Effect": "Allow",
+      "Action": ["s3:PutObject", "s3:DeleteObject", "s3:ListBucket"],
+      "Resource": ["arn:aws:s3:::devtrace-frontend", "arn:aws:s3:::devtrace-frontend/*"]
+    },
+    {
+      "Sid": "DevTraceCloudWatchLogs",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:DescribeLogStreams"
+      ],
+      "Resource": "arn:aws:logs:*:*:log-group:/devtrace/*"
+    },
+    {
+      "Sid": "DevTraceCloudWatchMetrics",
+      "Effect": "Allow",
+      "Action": ["cloudwatch:PutMetricData"],
+      "Resource": "*"
+    }
+  ]
+}
